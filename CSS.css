@@ -1,3 +1,14 @@
 body{
     text-align: center;
+    background-image: url(https://i.pinimg.com/originals/0a/30/69/0a30695813cff3cb2c20f1de7e795097.jpg);
+    padding: 200px;
+}
+h1{
+    color: yellow;
+}
+input{
+    color: green;
+    background-color: transparent;
+    border-color: green;
+
 }
