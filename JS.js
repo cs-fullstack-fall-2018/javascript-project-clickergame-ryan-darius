@@ -7,6 +7,7 @@ upgrade.addEventListener("click", upgrade1);
 sumButton.addEventListener("click", sumPress);
 var multiplier = 1;
 
+//This function is going to add 1 to the score when you click it
 function sumPress() {
     score += multiplier;
     total.innerHTML = score;
@@ -15,6 +16,7 @@ function sumPress() {
     }
 }
 
+//This function is going to upgrade when it gets to a certain score
 function upgrade1() {
     if (score >= 300) {
         nextUpgrade = -1;
@@ -22,20 +24,19 @@ function upgrade1() {
     }
     else {
         multiplier = multiplier * 2;
-        switch (nextUpgrade)
-        {
-        case 10:
-            nextUpgrade = 50;
-            break;
-        case 50:
-            nextUpgrade = 100;
-            break;
-        case 100:
-            nextUpgrade = 150;
-            break;
+        switch (nextUpgrade) {
+            case 10:
+                nextUpgrade = 50;
+                break;
+            case 50:
+                nextUpgrade = 100;
+                break;
+            case 100:
+                nextUpgrade = 150;
+                break;
         }
     }
     upgrade.setAttribute("disabled", "disabled");
-    upgrade.value="Upgrade: " + nextUpgrade;
+    upgrade.value = "Upgrade: " + nextUpgrade;
 }
-// setInterval()
+
